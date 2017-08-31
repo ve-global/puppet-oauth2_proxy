@@ -17,7 +17,7 @@ define oauth2_proxy::instance(
   }
 
   case $provider {
-    'init': {
+    'init', 'debian': {
       file { "/etc/init.d/oauth2_proxy-${title}":
         ensure  => file,
         owner   => 'root',
