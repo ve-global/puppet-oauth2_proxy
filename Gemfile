@@ -16,7 +16,7 @@ group :development, :test do
   gem 'rake',                     :require => false
   gem 'rspec', '~> 3.2',          :require => false
   gem 'puppetlabs_spec_helper',   :require => false
-  gem 'puppet-lint', '>= 1.1.0',  :require => false
+  gem 'puppet-lint', '~> 2.3',  :require => false
   gem 'puppet-syntax',            :require => false
   gem 'rspec-puppet', '~> 2.2',   :require => false
   gem 'metadata-json-lint',       :require => false
@@ -29,6 +29,7 @@ group :beaker do
   gem 'beaker-rspec',             :require => false
   gem 'pry',                      :require => false
   gem 'puppet-blacksmith',        :require => false
+  gem 'vagrant-wrapper',          :require => false
 end
 
 # vim:ft=ruby
