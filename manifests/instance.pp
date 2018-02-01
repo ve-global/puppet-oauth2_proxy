@@ -48,10 +48,10 @@ define oauth2_proxy::instance(
   if $manage_service {
     case $provider {
       'debian': {
-        service { "oauth2_proxy@${title}":
+        service { "oauth2_proxy-${title}":
           ensure    => 'running',
           enable    => true,
-          subscribe => File["/etc/init.d/oauth2_proxy@${title}", "/etc/oauth2_proxy/${title}.conf"],
+          subscribe => File["/etc/init.d/oauth2_proxy-${title}", "/etc/oauth2_proxy/${title}.conf"],
           provider  => $provider,
         }
       }
